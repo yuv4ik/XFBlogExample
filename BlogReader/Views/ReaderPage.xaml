@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodels="clr-namespace:BlogReader.ViewModels"
+    x:Class="BlogReader.ReaderPage"
+    Padding="25">
+     <ContentPage.BindingContext>
+        <viewmodels:ReaderViewModel />
+    </ContentPage.BindingContext>
+    <StackLayout
+        Orientation="Vertical">
+        <ListView
+            HasUnevenRows="true"
+            ItemsSource="{Binding BlogPosts}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}" Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Refresh" Command="{Binding RefreshCmd}" />
+    </StackLayout>
+</ContentPage>
