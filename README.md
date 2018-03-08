@@ -1,6 +1,6 @@
 # XFBlogExample
 
-Is an example of a simple ASP.NET Core API and Xamarin.Forms client.
+Is an example of a simple ASP.NET Core API and Xamarin.Forms client. There is a blogpost with all the details about this project on [my blog](https://smellyc0de.wordpress.com/2018/03/08/using-swagger-to-automatically-generate-the-client-code/).
 
 ## API
 
